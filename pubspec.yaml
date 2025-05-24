@@ -1,0 +1,27 @@
+name: nebula5_dart_gdbc
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+# repository: https://github.com/my_org/my_repo
+
+environment:
+  sdk: ^3.7.2
+
+# Add regular dependencies here.
+dependencies:
+  # path: ^1.8.0
+  protobuf: ^4.0.0
+  grpc: ^4.0.4
+  fixnum: ^1.1.1
+  decimal: ^3.2.1
+
+  # dart_gdbc: ^0.0.5
+  # dart_gdbc_pool: ^0.0.4+1
+  dart_gdbc: 
+    path: ../../
+  # dart_gdbc_pool: 
+  #   path: ../pool/dart_gdbc_pool
+
+dev_dependencies:
+  lints: ^5.0.0
+  test: ^1.24.0
+  flutter_dotenv: ^5.2.1

@@ -1,0 +1,16 @@
+// Copyright (c) 2025- All nebula5_dart_gdbc authors. All rights reserved.
+//
+// This source code is licensed under Apache 2.0 License.
+//
+// Translated from [nebula-driver](https://central.sonatype.com/artifact/com.vesoft/driver)
+
+part of 'package:nebula5_dart_gdbc/nebula5_dart_gdbc.dart';
+
+class RecordType extends DataType {
+  Map<String, DataType> fieldTypes = {};
+  RecordType(this.fieldTypes) : super(ColumnType.columnTypeRecord);
+
+  Map<String, DataType> getFieldTypes() {
+    return fieldTypes;
+  }
+}
