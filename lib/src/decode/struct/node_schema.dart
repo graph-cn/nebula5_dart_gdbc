@@ -13,9 +13,9 @@ class NodeSchema {
 
   NodeSchema(ng.NodeType nodeType) {
     _nodeTypeId = nodeType.nodeTypeId;
-    _nodeTypeName = utf8.decode(nodeType.nodeTypeName);
+    _nodeTypeName = nodeType.nodeTypeName.utf8String();
     for (var label in nodeType.label) {
-      _nodeLabels.add(utf8.decode(label));
+      _nodeLabels.add(label.utf8String());
     }
   }
 

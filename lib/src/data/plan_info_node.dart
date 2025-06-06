@@ -62,9 +62,9 @@ class PlanInfoNode {
   /// - `planInfo`: 原始计划信息对象
   PlanInfoNode(ng.PlanInfo planInfo)
     : _planInfo = planInfo,
-      _id = planInfo.id.toStr(),
-      _name = planInfo.name.toStr(),
-      _details = planInfo.details.toStr(),
+      _id = planInfo.id.utf8String(),
+      _name = planInfo.name.utf8String(),
+      _details = planInfo.details.utf8String(),
       _timeMs = planInfo.timeMs,
       _rows = planInfo.rows.toInt(),
       _memoryKib = planInfo.memoryKib,
@@ -75,7 +75,7 @@ class PlanInfoNode {
       _finishMs = planInfo.finishMs,
       _batches = planInfo.batches.toInt(),
       _concurrency = planInfo.concurrency.toInt(),
-      _otherStatsJson = planInfo.otherStatsJson.toStr(),
+      _otherStatsJson = planInfo.otherStatsJson.utf8String(),
       _children =
           planInfo.children.map((ng.PlanInfo child) {
             return PlanInfoNode(child);

@@ -27,7 +27,7 @@ class NRecord {
   /// - `key`: 属性名称
   /// - 返回: 如果包含则为 true
   /// - 抛出: 如果键为 null，则抛出 ArgumentError
-  bool containsKey(String key) {
+  bool containsKey(String? key) {
     if (key == null) {
       throw ArgumentError("null map key");
     }

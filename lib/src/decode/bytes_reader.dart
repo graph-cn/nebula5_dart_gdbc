@@ -26,7 +26,7 @@ class BytesReader {
     int startIndex = index;
     index += length;
     Uint8List strBytes = data.sublist(startIndex, index);
-    var rs = utf8.decode(strBytes);
+    var rs = strBytes.utf8String();
     return rs;
   }
 }

@@ -164,9 +164,7 @@ class VectorWrapper {
   ///
   /// - 返回: 路径特殊元数据对象
   PathSpecialMetaData get pathSpecialMetaData {
-    if (_pathSpecialMetaData == null) {
-      _pathSpecialMetaData = PathSpecialMetaData(_vector, _byteOrder);
-    }
+    _pathSpecialMetaData ??= PathSpecialMetaData(_vector, _byteOrder);
     return _pathSpecialMetaData!;
   }
 }

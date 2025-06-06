@@ -13,9 +13,9 @@ class EdgeSchema {
 
   EdgeSchema(ng.EdgeType edgeType) {
     _edgeTypeId = edgeType.edgeTypeId;
-    _edgeTypeName = utf8.decode(edgeType.edgeTypeName);
+    _edgeTypeName = edgeType.edgeTypeName.utf8String();
     for (var label in edgeType.label) {
-      _edgeLabels.add(utf8.decode(label));
+      _edgeLabels.add(label.utf8String());
     }
   }
 

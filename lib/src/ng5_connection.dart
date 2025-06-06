@@ -1,3 +1,7 @@
+// Copyright (c) 2025- All nebula5_dart_gdbc authors. All rights reserved.
+//
+// This source code is licensed under Apache 2.0 License.
+
 part of 'package:nebula5_dart_gdbc/nebula5_dart_gdbc.dart';
 
 class Ng5Connection extends Connection {
@@ -6,7 +10,12 @@ class Ng5Connection extends Connection {
   Int64? _sessionId;
   ClientTransportConnectorChannel? channel;
 
-  Ng5Connection._create(Uri address, {Map<String, dynamic>? properties}) {
+  Ng5Connection._create(
+    Uri address, {
+    Map<String, dynamic>? properties,
+    Function()? onClose,
+  }) {
+    this.onClose = onClose;
     this.properties = properties ?? <String, dynamic>{};
     channel = ClientTransportConnectorChannel(
       SocketTransportConnector(
@@ -30,7 +39,9 @@ class Ng5Connection extends Connection {
 
   @override
   Future<void> close() async {
+    await executeQuery("SESSION CLOSE");
     await channel?.shutdown();
+    onClose?.call();
   }
 
   @override
@@ -40,9 +51,8 @@ class Ng5Connection extends Connection {
   }
 
   @override
-  Future<Statement> createStatement() {
-    // TODO: implement createStatement
-    throw UnimplementedError();
+  Future<Statement> createStatement() async {
+    return Ng5Statement(this);
   }
 
   @override
@@ -58,7 +68,16 @@ class Ng5Connection extends Connection {
     ng.ExecuteResponse resp = await client.execute(
       ng.ExecuteRequest(sessionId: _sessionId, stmt: stmtBytes),
     );
-    return handleResult(resp, 0);
+    // var rs = handleResult(resp, 0);
+    // print(rs);
+
+    var gdbParser = Ng5ResultHandler(resp);
+    var rs = gdbParser.toResultSet();
+    if (rs.success) {
+      return rs;
+    } else {
+      throw GdbcQueryException(message: rs.message, code: rs.code);
+    }
   }
 
   @override
@@ -89,9 +108,8 @@ class Ng5Connection extends Connection {
   Future<PreparedStatement> prepareStatement(
     String gql, {
     String Function(String p1, Map<String, dynamic>? p2)? render,
-  }) {
-    // TODO: implement prepareStatement
-    throw UnimplementedError();
+  }) async {
+    return Ng5PreparedStatement(this, gql: gql, render: render);
   }
 
   @override

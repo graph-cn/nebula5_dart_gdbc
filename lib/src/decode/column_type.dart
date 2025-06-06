@@ -72,9 +72,8 @@ class ColumnType {
     0x20: columnTypeZonedDateTime,
     0x21: columnTypeReference,
     0x22: columnTypeDecimal,
-    // not support
-    // COLUMN_TYPE_ANY(0xFE),
-    // COLUMN_TYPE_INVALID(0xFF),
+    0xFE: columnTypeAny,
+    0xFF: columnTypeInvalid,
   };
 
   static ColumnType getColumnType(int type) {

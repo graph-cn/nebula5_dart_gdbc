@@ -14,7 +14,7 @@ class GraphSchema {
 
   GraphSchema(ng.PropertyGraphSchema graphSchema) {
     _graphId = graphSchema.graphId;
-    _graphName = utf8.decode(graphSchema.graphName);
+    _graphName = graphSchema.graphName.utf8String();
     for (var nodeType in graphSchema.nodeType) {
       _nodeSchemas[nodeType.nodeTypeId] = NodeSchema(nodeType);
     }

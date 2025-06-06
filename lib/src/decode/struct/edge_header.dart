@@ -58,7 +58,7 @@ class EdgeHeader {
   int _bytesToInt32(Uint8List bytes, int offset, int size) {
     ByteData buffer = ByteData(size);
     for (int i = 0; i < size; i++) {
-      buffer.setUint8(i, bytes[offset + i]);
+      buffer.setInt8(i, bytes[offset + i]);
     }
     return buffer.getInt32(0, byteOrder);
   }

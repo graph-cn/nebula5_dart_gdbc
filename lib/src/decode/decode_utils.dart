@@ -96,7 +96,7 @@ class DecodeUtils {
     );
     startPos += SizeConstant.elementNumberSizeForAnyValue;
     Uint8List strBytes = data.sublist(startPos, startPos + length);
-    return utf8.decode(strBytes);
+    return strBytes.utf8String();
   }
 
   /// Get the type of vector
