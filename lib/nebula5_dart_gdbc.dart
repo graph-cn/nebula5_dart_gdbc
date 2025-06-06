@@ -1,3 +1,7 @@
+// Copyright (c) 2025- All nebula5_dart_gdbc authors. All rights reserved.
+//
+// This source code is licensed under Apache 2.0 License.
+
 library;
 
 import 'dart:convert';
@@ -22,8 +26,6 @@ part 'src/ng5_result_set.dart';
 part 'src/ng5_result_set_meta_data.dart';
 part 'src/ng5_result_handler.dart';
 part 'src/ng5_prepared_statement.dart';
-
-// TODO: Export any libraries intended for clients of this package.
 
 part 'src/decode//batch.dart';
 part 'src/decode//bytes_reader.dart';
@@ -55,7 +57,6 @@ part 'src/decode/struct/path_special_meta_data.dart';
 part 'src/decode/struct/path_vector_pair.dart';
 part 'src/decode/struct/result_graph_schemas.dart';
 part 'src/decode/struct/size_constant.dart';
-part 'src/decode//value_parser.dart';
 part 'src/decode//vector_wrapper.dart';
 
 // data
