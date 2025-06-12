@@ -656,21 +656,30 @@ class Ng5ResultHandler {
     );
     ListHeader listHeader = ListHeader(valueData, byteOrder);
 
+    ValueMetaData? meta;
     for (int i = 0; i < listHeader.size; i++) {
       var elType = (p.type as ListType).valueType;
+      meta =
+          meta ?? ValueMetaData()
+            ..type = getType(elType.type)
+            ..name = 'item';
       var val = decodeValue(
         p.vector.getVectorWrapper(0),
         elType,
         listHeader.offset + i,
         p.m,
       );
-      p.m.addSubmeta(
-        ValueMetaData()
-          ..type = getType(elType.type)
-          ..name = 'item',
-        list,
-        val,
-      );
+      if (list.isEmpty) {
+        p.m.addSubmeta(
+          ValueMetaData()
+            ..type = getType(elType.type)
+            ..name = 'item',
+          list,
+          val,
+        );
+      } else {
+        list.add(val);
+      }
     }
     return list;
   }
