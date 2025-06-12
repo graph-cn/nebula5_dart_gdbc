@@ -9,6 +9,7 @@ class Ng5Connection extends Connection {
   late ng.GraphServiceClient client;
   Int64? _sessionId;
   ClientTransportConnectorChannel? channel;
+  String? schema;
 
   Ng5Connection._create(
     Uri address, {
@@ -31,10 +32,14 @@ class Ng5Connection extends Connection {
       ),
     );
     client = ng.GraphServiceClient(channel!);
+    schema = properties?['schema'] as String?;
   }
 
   Future<void> _open() async {
     await authencate();
+    if (databaseName != null) {
+      await executeQuery("SESSION SET home_schema_path = '$databaseName'");
+    }
   }
 
   @override
@@ -56,8 +61,7 @@ class Ng5Connection extends Connection {
   }
 
   @override
-  // TODO: implement databaseName
-  String? get databaseName => throw UnimplementedError();
+  String? get databaseName => schema;
 
   @override
   Future<ResultSet> executeQuery(
