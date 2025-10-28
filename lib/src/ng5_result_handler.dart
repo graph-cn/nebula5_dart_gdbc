@@ -370,7 +370,7 @@ class Ng5ResultHandler {
           noDirectedTypeId,
         )) {
       throw Exception(
-        "NODE 的值类型不包含 graphId ${edgeHeader.graphId} 或边类型 ID $noDirectedTypeId",
+        "EDGE 的值类型不包含 graphId ${edgeHeader.graphId} 或边类型 ID $noDirectedTypeId",
       );
     }
 
@@ -656,27 +656,20 @@ class Ng5ResultHandler {
     );
     ListHeader listHeader = ListHeader(valueData, byteOrder);
 
-    ValueMetaData? meta;
     for (int i = 0; i < listHeader.size; i++) {
       var elType = (p.type as ListType).valueType;
-      meta =
-          meta ?? ValueMetaData()
+      ValueMetaData meta =
+          p.m.submetas.firstOrNull ?? ValueMetaData()
             ..type = getType(elType.type)
             ..name = 'item';
       var val = decodeValue(
         p.vector.getVectorWrapper(0),
         elType,
         listHeader.offset + i,
-        p.m,
+        meta,
       );
       if (list.isEmpty) {
-        p.m.addSubmeta(
-          ValueMetaData()
-            ..type = getType(elType.type)
-            ..name = 'item',
-          list,
-          val,
-        );
+        p.m.addSubmeta(meta, list, val);
       } else {
         list.add(val);
       }
@@ -1162,7 +1155,7 @@ class Ng5ResultHandler {
   /// - `vector`: 向量封装器
   /// - `rowIndex`: 行索引
   /// - 返回: 任意值
-  AnyValue bytesToAny(Uint8List value, VectorWrapper vector, int rowIndex) {
+  Object? bytesToAny(Uint8List value, VectorWrapper vector, int rowIndex) {
     VectorWrapper dataTypeVector = vector.getVectorWrapper(0);
     ColumnType valueType = ColumnType.getColumnType(
       DecodeUtils.bytesToInt8(
@@ -1199,8 +1192,7 @@ class Ng5ResultHandler {
       );
       obj = decodeCompositeValue(reader, valueType);
     }
-
-    return AnyValue(obj, valueType);
+    return obj;
   }
 
   /// **解码常量向量为任意对象**
@@ -1409,15 +1401,13 @@ class Ng5ResultHandler {
         int nullBitSize =
             (listSize % 8 == 0) ? (listSize ~/ 8) : (listSize ~/ 8 + 1);
         Uint8List nullBitBytes = reader.read(nullBitSize);
-        List<ValueWrapper> values = [];
+        List<dynamic> values = [];
 
         for (int i = 0; i < listSize; i++) {
           if ((nullBitBytes[i ~/ 8] & (1 << (i % 8))) == 0) {
-            values.add(ValueWrapper(null, ColumnType.columnTypeNull));
+            values.add(null);
           } else {
-            values.add(
-              ValueWrapper(decodeCompositeValue(reader, eleType), eleType),
-            );
+            values.add(decodeCompositeValue(reader, eleType));
           }
         }
         return values;
@@ -1583,6 +1573,8 @@ GdbTypes getType(ColumnType columnType) {
       return GdbTypes.list;
     case ColumnType.columnTypeRecord:
       return GdbTypes.map;
+    case ColumnType.columnTypeEmbeddingVector:
+      return GdbTypes.embeddingVector;
     default:
       return GdbTypes.unknown;
   }
