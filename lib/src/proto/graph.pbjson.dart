@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: graph.proto
-//
+// Generated from graph.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -17,8 +19,20 @@ import 'dart:typed_data' as $typed_data;
 const QueryStats$json = {
   '1': 'QueryStats',
   '2': [
-    {'1': 'num_affected_nodes', '3': 1, '4': 1, '5': 3, '10': 'numAffectedNodes'},
-    {'1': 'num_affected_edges', '3': 2, '4': 1, '5': 3, '10': 'numAffectedEdges'},
+    {
+      '1': 'num_affected_nodes',
+      '3': 1,
+      '4': 1,
+      '5': 3,
+      '10': 'numAffectedNodes'
+    },
+    {
+      '1': 'num_affected_edges',
+      '3': 2,
+      '4': 1,
+      '5': 3,
+      '10': 'numAffectedEdges'
+    },
   ],
 };
 
@@ -46,7 +60,14 @@ const PlanInfo$json = {
     {'1': 'batches', '3': 13, '4': 1, '5': 3, '10': 'batches'},
     {'1': 'concurrency', '3': 14, '4': 1, '5': 3, '10': 'concurrency'},
     {'1': 'other_stats_json', '3': 15, '4': 1, '5': 12, '10': 'otherStatsJson'},
-    {'1': 'children', '3': 16, '4': 3, '5': 11, '6': '.nebula.proto.graph.PlanInfo', '10': 'children'},
+    {
+      '1': 'children',
+      '3': 16,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.graph.PlanInfo',
+      '10': 'children'
+    },
   ],
 };
 
@@ -66,7 +87,13 @@ final $typed_data.Uint8List planInfoDescriptor = $convert.base64Decode(
 const ElapsedTime$json = {
   '1': 'ElapsedTime',
   '2': [
-    {'1': 'total_server_time_us', '3': 1, '4': 1, '5': 3, '10': 'totalServerTimeUs'},
+    {
+      '1': 'total_server_time_us',
+      '3': 1,
+      '4': 1,
+      '5': 3,
+      '10': 'totalServerTimeUs'
+    },
     {'1': 'build_time_us', '3': 2, '4': 1, '5': 3, '10': 'buildTimeUs'},
     {'1': 'optimize_time_us', '3': 3, '4': 1, '5': 3, '10': 'optimizeTimeUs'},
     {'1': 'serialize_time_us', '3': 4, '4': 1, '5': 3, '10': 'serializeTimeUs'},
@@ -85,10 +112,31 @@ final $typed_data.Uint8List elapsedTimeDescriptor = $convert.base64Decode(
 const Summary$json = {
   '1': 'Summary',
   '2': [
-    {'1': 'elapsed_time', '3': 1, '4': 1, '5': 11, '6': '.nebula.proto.graph.ElapsedTime', '10': 'elapsedTime'},
+    {
+      '1': 'elapsed_time',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.graph.ElapsedTime',
+      '10': 'elapsedTime'
+    },
     {'1': 'explain_type', '3': 2, '4': 1, '5': 12, '10': 'explainType'},
-    {'1': 'plan_info', '3': 3, '4': 1, '5': 11, '6': '.nebula.proto.graph.PlanInfo', '10': 'planInfo'},
-    {'1': 'query_stats', '3': 4, '4': 1, '5': 11, '6': '.nebula.proto.graph.QueryStats', '10': 'queryStats'},
+    {
+      '1': 'plan_info',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.graph.PlanInfo',
+      '10': 'planInfo'
+    },
+    {
+      '1': 'query_stats',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.graph.QueryStats',
+      '10': 'queryStats'
+    },
     {'1': 'log_stream', '3': 5, '4': 1, '5': 12, '10': 'logStream'},
   ],
 };
@@ -119,9 +167,30 @@ final $typed_data.Uint8List executeRequestDescriptor = $convert.base64Decode(
 const ExecuteResponse$json = {
   '1': 'ExecuteResponse',
   '2': [
-    {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.nebula.proto.common.Status', '10': 'status'},
-    {'1': 'result', '3': 2, '4': 1, '5': 11, '6': '.nebula.proto.vector.VectorResultTable', '10': 'result'},
-    {'1': 'summary', '3': 3, '4': 1, '5': 11, '6': '.nebula.proto.graph.Summary', '10': 'summary'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Status',
+      '10': 'status'
+    },
+    {
+      '1': 'result',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.vector.VectorResultTable',
+      '10': 'result'
+    },
+    {
+      '1': 'summary',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.graph.Summary',
+      '10': 'summary'
+    },
     {'1': 'cursor', '3': 4, '4': 1, '5': 12, '10': 'cursor'},
   ],
 };
@@ -139,7 +208,14 @@ const AuthRequest$json = {
   '2': [
     {'1': 'username', '3': 1, '4': 1, '5': 12, '10': 'username'},
     {'1': 'auth_info', '3': 2, '4': 1, '5': 12, '10': 'authInfo'},
-    {'1': 'client_info', '3': 3, '4': 1, '5': 11, '6': '.nebula.proto.common.ClientInfo', '10': 'clientInfo'},
+    {
+      '1': 'client_info',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.ClientInfo',
+      '10': 'clientInfo'
+    },
   ],
 };
 
@@ -153,7 +229,14 @@ final $typed_data.Uint8List authRequestDescriptor = $convert.base64Decode(
 const AuthResponse$json = {
   '1': 'AuthResponse',
   '2': [
-    {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.nebula.proto.common.Status', '10': 'status'},
+    {
+      '1': 'status',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Status',
+      '10': 'status'
+    },
     {'1': 'session_id', '3': 2, '4': 1, '5': 3, '10': 'sessionId'},
     {'1': 'version', '3': 3, '4': 1, '5': 12, '10': 'version'},
   ],
@@ -164,4 +247,3 @@ final $typed_data.Uint8List authResponseDescriptor = $convert.base64Decode(
     'CgxBdXRoUmVzcG9uc2USMwoGc3RhdHVzGAEgASgLMhsubmVidWxhLnByb3RvLmNvbW1vbi5TdG'
     'F0dXNSBnN0YXR1cxIdCgpzZXNzaW9uX2lkGAIgASgDUglzZXNzaW9uSWQSGAoHdmVyc2lvbhgD'
     'IAEoDFIHdmVyc2lvbg==');
-

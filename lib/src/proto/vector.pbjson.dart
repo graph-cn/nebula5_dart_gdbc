@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: vector.proto
-//
+// Generated from vector.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -17,7 +19,14 @@ import 'dart:typed_data' as $typed_data;
 const Row$json = {
   '1': 'Row',
   '2': [
-    {'1': 'values', '3': 1, '4': 3, '5': 11, '6': '.nebula.proto.common.Value', '10': 'values'},
+    {
+      '1': 'values',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.common.Value',
+      '10': 'values'
+    },
   ],
 };
 
@@ -35,8 +44,8 @@ const ValueType$json = {
 };
 
 /// Descriptor for `ValueType`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List valueTypeDescriptor = $convert.base64Decode(
-    'CglWYWx1ZVR5cGUSHQoKdmFsdWVfdHlwZRgBIAEoDFIJdmFsdWVUeXBl');
+final $typed_data.Uint8List valueTypeDescriptor = $convert
+    .base64Decode('CglWYWx1ZVR5cGUSHQoKdmFsdWVfdHlwZRgBIAEoDFIJdmFsdWVUeXBl');
 
 @$core.Deprecated('Use rowTypeDescriptor instead')
 const RowType$json = {
@@ -44,7 +53,14 @@ const RowType$json = {
   '2': [
     {'1': 'num_columns', '3': 1, '4': 1, '5': 13, '10': 'numColumns'},
     {'1': 'column_names', '3': 2, '4': 3, '5': 9, '10': 'columnNames'},
-    {'1': 'column_types', '3': 3, '4': 3, '5': 11, '6': '.nebula.proto.vector.ValueType', '10': 'columnTypes'},
+    {
+      '1': 'column_types',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.vector.ValueType',
+      '10': 'columnTypes'
+    },
   ],
 };
 
@@ -59,7 +75,13 @@ const VectorCommonMetaData$json = {
   '1': 'VectorCommonMetaData',
   '2': [
     {'1': 'num_records', '3': 1, '4': 1, '5': 13, '10': 'numRecords'},
-    {'1': 'vector_content_type', '3': 2, '4': 1, '5': 13, '10': 'vectorContentType'},
+    {
+      '1': 'vector_content_type',
+      '3': 2,
+      '4': 1,
+      '5': 13,
+      '10': 'vectorContentType'
+    },
   ],
 };
 
@@ -104,8 +126,22 @@ const PropertyGraphSchema$json = {
   '2': [
     {'1': 'graph_id', '3': 1, '4': 1, '5': 5, '10': 'graphId'},
     {'1': 'graph_name', '3': 2, '4': 1, '5': 12, '10': 'graphName'},
-    {'1': 'node_type', '3': 3, '4': 3, '5': 11, '6': '.nebula.proto.vector.NodeType', '10': 'nodeType'},
-    {'1': 'edge_type', '3': 4, '4': 3, '5': 11, '6': '.nebula.proto.vector.EdgeType', '10': 'edgeType'},
+    {
+      '1': 'node_type',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.vector.NodeType',
+      '10': 'nodeType'
+    },
+    {
+      '1': 'edge_type',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.vector.EdgeType',
+      '10': 'edgeType'
+    },
   ],
 };
 
@@ -122,11 +158,25 @@ const VectorTableMetaData$json = {
   '2': [
     {'1': 'table_type', '3': 1, '4': 1, '5': 13, '10': 'tableType'},
     {'1': 'num_records', '3': 2, '4': 1, '5': 4, '10': 'numRecords'},
-    {'1': 'row_type', '3': 3, '4': 1, '5': 11, '6': '.nebula.proto.vector.RowType', '10': 'rowType'},
+    {
+      '1': 'row_type',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.vector.RowType',
+      '10': 'rowType'
+    },
     {'1': 'num_batches', '3': 4, '4': 1, '5': 13, '10': 'numBatches'},
     {'1': 'time_zone_offset', '3': 5, '4': 1, '5': 13, '10': 'timeZoneOffset'},
     {'1': 'is_little_endian', '3': 6, '4': 1, '5': 8, '10': 'isLittleEndian'},
-    {'1': 'graph_schema', '3': 7, '4': 3, '5': 11, '6': '.nebula.proto.vector.PropertyGraphSchema', '10': 'graphSchema'},
+    {
+      '1': 'graph_schema',
+      '3': 7,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.vector.PropertyGraphSchema',
+      '10': 'graphSchema'
+    },
   ],
 };
 
@@ -144,12 +194,38 @@ final $typed_data.Uint8List vectorTableMetaDataDescriptor = $convert.base64Decod
 const NestedVector$json = {
   '1': 'NestedVector',
   '2': [
-    {'1': 'num_nested_vectors', '3': 1, '4': 1, '5': 13, '10': 'numNestedVectors'},
-    {'1': 'common_meta_data', '3': 2, '4': 1, '5': 11, '6': '.nebula.proto.vector.VectorCommonMetaData', '10': 'commonMetaData'},
-    {'1': 'special_meta_data', '3': 3, '4': 1, '5': 12, '10': 'specialMetaData'},
+    {
+      '1': 'num_nested_vectors',
+      '3': 1,
+      '4': 1,
+      '5': 13,
+      '10': 'numNestedVectors'
+    },
+    {
+      '1': 'common_meta_data',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.vector.VectorCommonMetaData',
+      '10': 'commonMetaData'
+    },
+    {
+      '1': 'special_meta_data',
+      '3': 3,
+      '4': 1,
+      '5': 12,
+      '10': 'specialMetaData'
+    },
     {'1': 'vector_data', '3': 4, '4': 1, '5': 12, '10': 'vectorData'},
     {'1': 'null_bit_map', '3': 5, '4': 1, '5': 12, '10': 'nullBitMap'},
-    {'1': 'nested_vectors', '3': 6, '4': 3, '5': 11, '6': '.nebula.proto.vector.NestedVector', '10': 'nestedVectors'},
+    {
+      '1': 'nested_vectors',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.vector.NestedVector',
+      '10': 'nestedVectors'
+    },
   ],
 };
 
@@ -166,7 +242,14 @@ final $typed_data.Uint8List nestedVectorDescriptor = $convert.base64Decode(
 const VectorBatch$json = {
   '1': 'VectorBatch',
   '2': [
-    {'1': 'vectors', '3': 1, '4': 3, '5': 11, '6': '.nebula.proto.vector.NestedVector', '10': 'vectors'},
+    {
+      '1': 'vectors',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.vector.NestedVector',
+      '10': 'vectors'
+    },
   ],
 };
 
@@ -179,9 +262,29 @@ final $typed_data.Uint8List vectorBatchDescriptor = $convert.base64Decode(
 const VectorResultTable$json = {
   '1': 'VectorResultTable',
   '2': [
-    {'1': 'data_layout_version', '3': 1, '4': 1, '5': 12, '10': 'dataLayoutVersion'},
-    {'1': 'meta', '3': 2, '4': 1, '5': 11, '6': '.nebula.proto.vector.VectorTableMetaData', '10': 'meta'},
-    {'1': 'batch', '3': 3, '4': 3, '5': 11, '6': '.nebula.proto.vector.VectorBatch', '10': 'batch'},
+    {
+      '1': 'data_layout_version',
+      '3': 1,
+      '4': 1,
+      '5': 12,
+      '10': 'dataLayoutVersion'
+    },
+    {
+      '1': 'meta',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.vector.VectorTableMetaData',
+      '10': 'meta'
+    },
+    {
+      '1': 'batch',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.vector.VectorBatch',
+      '10': 'batch'
+    },
   ],
 };
 
@@ -197,7 +300,14 @@ const ResultTable$json = {
   '1': 'ResultTable',
   '2': [
     {'1': 'column_names', '3': 1, '4': 3, '5': 12, '10': 'columnNames'},
-    {'1': 'records', '3': 2, '4': 3, '5': 11, '6': '.nebula.proto.vector.Row', '10': 'records'},
+    {
+      '1': 'records',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.vector.Row',
+      '10': 'records'
+    },
   ],
 };
 
@@ -205,4 +315,3 @@ const ResultTable$json = {
 final $typed_data.Uint8List resultTableDescriptor = $convert.base64Decode(
     'CgtSZXN1bHRUYWJsZRIhCgxjb2x1bW5fbmFtZXMYASADKAxSC2NvbHVtbk5hbWVzEjIKB3JlY2'
     '9yZHMYAiADKAsyGC5uZWJ1bGEucHJvdG8udmVjdG9yLlJvd1IHcmVjb3Jkcw==');
-

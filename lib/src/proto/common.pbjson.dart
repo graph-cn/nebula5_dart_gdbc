@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: common.proto
-//
+// Generated from common.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -148,7 +150,14 @@ final $typed_data.Uint8List zonedDatetimeDescriptor = $convert.base64Decode(
 const List_$json = {
   '1': 'List',
   '2': [
-    {'1': 'values', '3': 1, '4': 3, '5': 11, '6': '.nebula.proto.common.Value', '10': 'values'},
+    {
+      '1': 'values',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.common.Value',
+      '10': 'values'
+    },
   ],
 };
 
@@ -166,14 +175,21 @@ const Vector$json = {
 };
 
 /// Descriptor for `Vector`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List vectorDescriptor = $convert.base64Decode(
-    'CgZWZWN0b3ISFgoGdmFsdWVzGAEgAygCUgZ2YWx1ZXM=');
+final $typed_data.Uint8List vectorDescriptor =
+    $convert.base64Decode('CgZWZWN0b3ISFgoGdmFsdWVzGAEgAygCUgZ2YWx1ZXM=');
 
 @$core.Deprecated('Use recordDescriptor instead')
 const Record$json = {
   '1': 'Record',
   '2': [
-    {'1': 'values', '3': 1, '4': 3, '5': 11, '6': '.nebula.proto.common.Record.ValuesEntry', '10': 'values'},
+    {
+      '1': 'values',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.common.Record.ValuesEntry',
+      '10': 'values'
+    },
   ],
   '3': [Record_ValuesEntry$json],
 };
@@ -183,7 +199,14 @@ const Record_ValuesEntry$json = {
   '1': 'ValuesEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.nebula.proto.common.Value', '10': 'value'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Value',
+      '10': 'value'
+    },
   ],
   '7': {'7': true},
 };
@@ -202,7 +225,14 @@ const Node$json = {
     {'1': 'graph', '3': 2, '4': 1, '5': 9, '10': 'graph'},
     {'1': 'type', '3': 3, '4': 1, '5': 9, '10': 'type'},
     {'1': 'labels', '3': 4, '4': 3, '5': 9, '10': 'labels'},
-    {'1': 'properties', '3': 5, '4': 3, '5': 11, '6': '.nebula.proto.common.Node.PropertiesEntry', '10': 'properties'},
+    {
+      '1': 'properties',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.common.Node.PropertiesEntry',
+      '10': 'properties'
+    },
   ],
   '3': [Node_PropertiesEntry$json],
 };
@@ -212,7 +242,14 @@ const Node_PropertiesEntry$json = {
   '1': 'PropertiesEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.nebula.proto.common.Value', '10': 'value'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Value',
+      '10': 'value'
+    },
   ],
   '7': {'7': true},
 };
@@ -231,12 +268,26 @@ const Edge$json = {
   '2': [
     {'1': 'src_id', '3': 1, '4': 1, '5': 3, '10': 'srcId'},
     {'1': 'dst_id', '3': 2, '4': 1, '5': 3, '10': 'dstId'},
-    {'1': 'direction', '3': 3, '4': 1, '5': 14, '6': '.nebula.proto.common.Edge.Direction', '10': 'direction'},
+    {
+      '1': 'direction',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.nebula.proto.common.Edge.Direction',
+      '10': 'direction'
+    },
     {'1': 'graph', '3': 4, '4': 1, '5': 9, '10': 'graph'},
     {'1': 'type', '3': 5, '4': 1, '5': 9, '10': 'type'},
     {'1': 'labels', '3': 6, '4': 3, '5': 9, '10': 'labels'},
     {'1': 'rank', '3': 7, '4': 1, '5': 3, '10': 'rank'},
-    {'1': 'properties', '3': 8, '4': 3, '5': 11, '6': '.nebula.proto.common.Edge.PropertiesEntry', '10': 'properties'},
+    {
+      '1': 'properties',
+      '3': 8,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.common.Edge.PropertiesEntry',
+      '10': 'properties'
+    },
   ],
   '3': [Edge_PropertiesEntry$json],
   '4': [Edge_Direction$json],
@@ -247,7 +298,14 @@ const Edge_PropertiesEntry$json = {
   '1': 'PropertiesEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.nebula.proto.common.Value', '10': 'value'},
+    {
+      '1': 'value',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Value',
+      '10': 'value'
+    },
   ],
   '7': {'7': true},
 };
@@ -281,14 +339,21 @@ const Decimal$json = {
 };
 
 /// Descriptor for `Decimal`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List decimalDescriptor = $convert.base64Decode(
-    'CgdEZWNpbWFsEhIKBHN2YWwYBSABKAlSBHN2YWw=');
+final $typed_data.Uint8List decimalDescriptor =
+    $convert.base64Decode('CgdEZWNpbWFsEhIKBHN2YWwYBSABKAlSBHN2YWw=');
 
 @$core.Deprecated('Use pathDescriptor instead')
 const Path$json = {
   '1': 'Path',
   '2': [
-    {'1': 'values', '3': 1, '4': 3, '5': 11, '6': '.nebula.proto.common.Value', '10': 'values'},
+    {
+      '1': 'values',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.nebula.proto.common.Value',
+      '10': 'values'
+    },
   ],
 };
 
@@ -325,21 +390,140 @@ const Value$json = {
     {'1': 'uint64_value', '3': 9, '4': 1, '5': 4, '9': 0, '10': 'uint64Value'},
     {'1': 'float_value', '3': 10, '4': 1, '5': 2, '9': 0, '10': 'floatValue'},
     {'1': 'double_value', '3': 11, '4': 1, '5': 1, '9': 0, '10': 'doubleValue'},
-    {'1': 'string_value', '3': 12, '4': 1, '5': 12, '9': 0, '10': 'stringValue'},
-    {'1': 'list_value', '3': 13, '4': 1, '5': 11, '6': '.nebula.proto.common.List', '9': 0, '10': 'listValue'},
-    {'1': 'record_value', '3': 14, '4': 1, '5': 11, '6': '.nebula.proto.common.Record', '9': 0, '10': 'recordValue'},
-    {'1': 'node_value', '3': 15, '4': 1, '5': 11, '6': '.nebula.proto.common.Node', '9': 0, '10': 'nodeValue'},
-    {'1': 'edge_value', '3': 16, '4': 1, '5': 11, '6': '.nebula.proto.common.Edge', '9': 0, '10': 'edgeValue'},
-    {'1': 'path_value', '3': 17, '4': 1, '5': 11, '6': '.nebula.proto.common.Path', '9': 0, '10': 'pathValue'},
-    {'1': 'duration_value', '3': 18, '4': 1, '5': 11, '6': '.nebula.proto.common.Duration', '9': 0, '10': 'durationValue'},
-    {'1': 'local_time_value', '3': 19, '4': 1, '5': 11, '6': '.nebula.proto.common.LocalTime', '9': 0, '10': 'localTimeValue'},
-    {'1': 'zoned_time_value', '3': 20, '4': 1, '5': 11, '6': '.nebula.proto.common.ZonedTime', '9': 0, '10': 'zonedTimeValue'},
-    {'1': 'date_value', '3': 21, '4': 1, '5': 11, '6': '.nebula.proto.common.Date', '9': 0, '10': 'dateValue'},
-    {'1': 'local_datetime_value', '3': 22, '4': 1, '5': 11, '6': '.nebula.proto.common.LocalDatetime', '9': 0, '10': 'localDatetimeValue'},
-    {'1': 'zoned_datetime_value', '3': 23, '4': 1, '5': 11, '6': '.nebula.proto.common.ZonedDatetime', '9': 0, '10': 'zonedDatetimeValue'},
-    {'1': 'ref_value', '3': 24, '4': 1, '5': 11, '6': '.nebula.proto.common.Ref', '9': 0, '10': 'refValue'},
-    {'1': 'decimal_value', '3': 25, '4': 1, '5': 11, '6': '.nebula.proto.common.Decimal', '9': 0, '10': 'decimalValue'},
-    {'1': 'vector_value', '3': 26, '4': 1, '5': 11, '6': '.nebula.proto.common.Vector', '9': 0, '10': 'vectorValue'},
+    {
+      '1': 'string_value',
+      '3': 12,
+      '4': 1,
+      '5': 12,
+      '9': 0,
+      '10': 'stringValue'
+    },
+    {
+      '1': 'list_value',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.List',
+      '9': 0,
+      '10': 'listValue'
+    },
+    {
+      '1': 'record_value',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Record',
+      '9': 0,
+      '10': 'recordValue'
+    },
+    {
+      '1': 'node_value',
+      '3': 15,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Node',
+      '9': 0,
+      '10': 'nodeValue'
+    },
+    {
+      '1': 'edge_value',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Edge',
+      '9': 0,
+      '10': 'edgeValue'
+    },
+    {
+      '1': 'path_value',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Path',
+      '9': 0,
+      '10': 'pathValue'
+    },
+    {
+      '1': 'duration_value',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Duration',
+      '9': 0,
+      '10': 'durationValue'
+    },
+    {
+      '1': 'local_time_value',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.LocalTime',
+      '9': 0,
+      '10': 'localTimeValue'
+    },
+    {
+      '1': 'zoned_time_value',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.ZonedTime',
+      '9': 0,
+      '10': 'zonedTimeValue'
+    },
+    {
+      '1': 'date_value',
+      '3': 21,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Date',
+      '9': 0,
+      '10': 'dateValue'
+    },
+    {
+      '1': 'local_datetime_value',
+      '3': 22,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.LocalDatetime',
+      '9': 0,
+      '10': 'localDatetimeValue'
+    },
+    {
+      '1': 'zoned_datetime_value',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.ZonedDatetime',
+      '9': 0,
+      '10': 'zonedDatetimeValue'
+    },
+    {
+      '1': 'ref_value',
+      '3': 24,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Ref',
+      '9': 0,
+      '10': 'refValue'
+    },
+    {
+      '1': 'decimal_value',
+      '3': 25,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Decimal',
+      '9': 0,
+      '10': 'decimalValue'
+    },
+    {
+      '1': 'vector_value',
+      '3': 26,
+      '4': 1,
+      '5': 11,
+      '6': '.nebula.proto.common.Vector',
+      '9': 0,
+      '10': 'vectorValue'
+    },
   ],
   '4': [Value_Type$json],
   '8': [
@@ -460,7 +644,14 @@ final $typed_data.Uint8List dirInfoDescriptor = $convert.base64Decode(
 const ClientInfo$json = {
   '1': 'ClientInfo',
   '2': [
-    {'1': 'lang', '3': 1, '4': 1, '5': 14, '6': '.nebula.proto.common.ClientInfo.Language', '10': 'lang'},
+    {
+      '1': 'lang',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.nebula.proto.common.ClientInfo.Language',
+      '10': 'lang'
+    },
     {'1': 'protocol_version', '3': 2, '4': 1, '5': 12, '10': 'protocolVersion'},
     {'1': 'version', '3': 3, '4': 1, '5': 12, '10': 'version'},
   ],
@@ -487,4 +678,3 @@ final $typed_data.Uint8List clientInfoDescriptor = $convert.base64Decode(
     'ZXJzaW9uEhgKB3ZlcnNpb24YAyABKAxSB3ZlcnNpb24iTgoITGFuZ3VhZ2USCwoHVU5LTk9XTh'
     'AAEgcKA0NQUBABEgYKAkdPEAISCAoESkFWQRADEgoKBlBZVEhPThAEEg4KCkpBVkFTQ1JJUFQQ'
     'BQ==');
-
